@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kedai Kang Iky</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#A0522D", // Deep, muted terracotta red
+                        "secondary": "#7A5230", // Warm, dark wood brown
+                        "accent": "#D4C9BF", // Soft greige
+                        "background-light": "#F8F5F2", // Slightly adjusted off-white for better contrast with greige, previously was #fcfaf8
+                        "background-dark": "#221810", // Very Dark Coffee (maintained)
+                        "coffee-dark": "#1b130d", // Dark Text (maintained)
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style></style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-coffee-dark dark:text-white transition-colors duration-200 font-body">
+    <header
+        class="sticky top-0 z-50 w-full bg-background-light/95 backdrop-blur-sm border-b border-accent dark:bg-background-dark/95 dark:border-[#3e2b22]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">store</span>
+                    <h1 class="text-xl font-bold tracking-tight text-coffee-dark dark:text-white font-display">Kedai
+                        Kang Iky</h1>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-coffee-dark hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary font-display"
+                        href="#">Beranda</a>
+                    <a class="text-sm font-medium text-coffee-dark hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary font-display"
+                        href="#tentang">Tentang Kami</a>
+                    <a class="text-sm font-medium text-coffee-dark hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary font-display"
+                        href="menu.html">Menu</a>
+                    <a class="text-sm font-medium text-coffee-dark hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary font-display"
+                        href="#kontak">Kontak</a>
+                </nav>
+                <div class="hidden md:flex">
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2 px-5 rounded-lg transition-colors shadow-sm flex items-center gap-2 font-display">
+                        <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                        Pesan Sekarang
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-coffee-dark dark:text-white hover:text-primary p-2 font-display">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 hidden md:hidden bg-background-light dark:bg-background-dark">
+        <div class="p-4 flex items-center justify-between border-b border-accent dark:border-[#3e2b22]">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-3xl">store</span>
+                <span class="font-bold text-lg font-display">Kedai Kang Iky</span>
+            </div>
+            <button id="close-menu" class="p-2 text-coffee-dark dark:text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+    
+        <nav class="flex flex-col gap-6 p-6 text-lg font-display">
+            <a href="#" class="hover:text-primary">Beranda</a>
+            <a href="#tentang" class="hover:text-primary">Tentang Kami</a>
+            <a href="menu.html" class="hover:text-primary">Menu</a>
+            <a href="#kontak" class="hover:text-primary">Kontak</a>
+    
+            <button class="mt-6 bg-primary text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                Pesan Sekarang
+            </button>
+        </nav>
+    </div>
+
+    <section class="relative w-full">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center"
+                data-alt="Pouring hot coffee into a cup close up warm lighting"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(gambar/kedai2.jpeg);">
+            </div>
+        </div>
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 flex flex-col items-center text-center">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-primary/20 border border-primary/30 text-white text-xs font-semibold tracking-wide uppercase mb-6 backdrop-blur-sm font-display">
+                Authentic &amp; Local
+            </span>
+            <h1
+                class="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight mb-6 max-w-3xl drop-shadow-md font-display">
+                Tempat Favorit untuk <span class="text-primary">Makan.Minum.Santai</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl font-light">
+            Disajikan dengan penuh rasa dan perhatian, menggunakan bahan pilihan yang kami olah dengan sepenuh hati. Tempat di mana
+            setiap hidangan menemani cerita, kebersamaan, dan waktu santai Anda.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white text-base font-bold py-3 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 font-display">
+                    <span class="material-symbols-outlined">restaurant_menu</span>
+                    Lihat Menu
+                </button>
+                <button
+                    class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-base font-bold py-3 px-8 rounded-lg transition-all flex items-center justify-center gap-2 font-display">
+                    <span class="material-symbols-outlined">location_on</span>
+                    Lokasi Kami
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-background-light dark:bg-[#2a1f18]" id="tentang">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative z-10">
+                        <div class="w-full h-full bg-cover bg-center transform transition hover:scale-105 duration-700"
+                            data-alt="Barista brewing coffee manually with pour over method"
+                            style="background-image: url(gambar/kedai.jpeg);">
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl z-0"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-secondary/10 rounded-full blur-2xl z-0"></div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col gap-6">
+                    <div>
+                        <h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-2 font-display">Tentang
+                            Kami</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-coffee-dark dark:text-white mb-4 font-display">
+                            Cerita di Balik Setiap Sajian</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                    Berawal dari hobi mengolah makanan dan minuman di dapur rumah yang sederhana, kami bermimpi menghadirkan sajian yang
+                    enak, hangat, dan bisa dinikmati semua kalangan.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        Setiap menu yang kami sajikan dipilih dan diolah dengan perhatian pada kualitas rasa dan kebersihan. Kami percaya, bahan
+                        yang baik dan proses yang tulus akan menghasilkan sajian yang memberi kesan di setiap kunjungan.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-4">
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                <span class="material-symbols-outlined">eco</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-coffee-dark dark:text-white font-display">Bahan Berkualitas</h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Menggunakan bahan berkualitas & terpercaya
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                <span class="material-symbols-outlined">favorite</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-coffee-dark dark:text-white font-display">Dibuat dengan Hati
+                                </h4>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Diolah dengan perhatian dan konsistensi rasa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <button
+                            class="text-primary font-bold text-base hover:text-primary/80 flex items-center gap-1 group font-display">
+                            Baca Selengkapnya
+                            <span
+                                class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-background-light dark:bg-background-dark" id="menu">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-2 font-display">Menu Favorit</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-coffee-dark dark:text-white mb-4 font-display">Pilihan
+                    Terbaik Minggu Ini</h3>
+                <p class="text-gray-600 dark:text-gray-400">Dari yang ringan sampai mengenyangkan, semua kami siapkan untuk menemani harimu.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="group bg-white dark:bg-[#2a1f18] rounded-xl border border-accent dark:border-[#3e2b22] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="aspect-square w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Iced coffee milk with brown sugar in a glass"
+                        style="background-image: url(gambar/basreng.jpeg);">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg text-coffee-dark dark:text-white font-display">Basreng Karedok</h4>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Basreng lembut dengan campuran bumbu karedok</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-primary font-bold text-lg font-display">Rp 7.000</span>
+                            <button
+                                class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors font-display">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group bg-white dark:bg-[#2a1f18] rounded-xl border border-accent dark:border-[#3e2b22] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="aspect-square w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Pour over coffee in a glass server"
+                        style="background-image: url(gambar/mojito.jpg);">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg text-coffee-dark dark:text-white font-display">Es Mojito</h4>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Gabungan rasa manis gula, asam jeruk nipis, dan aroma harum daun mint.</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-primary font-bold text-lg font-display">Rp 8.000</span>
+                            <button
+                                class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors font-display">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group bg-white dark:bg-[#2a1f18] rounded-xl border border-accent dark:border-[#3e2b22] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="aspect-square w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Chocolate toast with cheese topping on a wooden plate"
+                        style="background-image: url(gambar/pancong.jpeg);">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg text-coffee-dark dark:text-white font-display">Kue Pancong</h4>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Kue lembut dengan toping coklat yang lumer</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-primary font-bold text-lg font-display">Rp 10.000</span>
+                            <button
+                                class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors font-display">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group bg-white dark:bg-[#2a1f18] rounded-xl border border-accent dark:border-[#3e2b22] overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="aspect-square w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Matcha latte green tea in a glass with ice"
+                        style="background-image: url(gambar/jebew.jpeg);">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-lg text-coffee-dark dark:text-white font-display">Mie Jebew
+                            </h4>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Mie pedas dengan populer</p>
+                        <div class="mt-auto flex items-center justify-between">
+                            <span class="text-primary font-bold text-lg font-display">Rp 10.000</span>
+                            <button
+                                class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors font-display">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <button
+                    class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-primary bg-primary/10 hover:bg-primary/20 transition-colors font-display">
+                    Lihat Semua Menu
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-background-light dark:bg-[#2a1f18] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-primary font-bold text-sm tracking-widest uppercase mb-2 font-display">Kata Mereka</h2>
+                <h3 class="text-3xl font-bold text-coffee-dark dark:text-white font-display">Apa Kata Pelanggan Kami
+                </h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-accent/30 dark:bg-background-dark p-8 rounded-2xl relative">
+                    <span
+                        class="material-symbols-outlined absolute top-6 right-6 text-4xl text-primary/20">format_quote</span>
+                    <div class="flex text-yellow-500 mb-4">
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"Tempatnya cozy banget buat nugas, playlist
+                        lagunya juga enak. Kopi susunya pas, nggak terlalu manis."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 bg-cover bg-center"
+                            data-alt="Portrait of a smiling young woman"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8q5kLZtOm0_arLSNRkpi8bUpVky2i7wIV68V8MyKu2gML2_y0Lc3OMsWI_pHETR0zfClVQG9oM_g30OY4CQLOOTjEUlo5HUCQz6pHIaDhNdhOXnCDiKCvWqFCurLC1NBa443ctj8kYJXHpOkYLpMpvtc38PV2bYVr9nOLAG_KjWo1_bvYq3_B_hu-3QKb92RQ-id6V2_LVvuU77K6T154yaiptnvPA2azB2knOSBDQtA8CUfdhIu87zplNVXGCh2KBo9ejIsaKgfx');">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-coffee-dark dark:text-white font-display">Siti Nurhaliza
+                            </h4>
+                            <p class="text-xs text-gray-500">Mahasiswi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-accent/30 dark:bg-background-dark p-8 rounded-2xl relative">
+                    <span
+                        class="material-symbols-outlined absolute top-6 right-6 text-4xl text-primary/20">format_quote</span>
+                    <div class="flex text-yellow-500 mb-4">
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star_half</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"Baristanya ramah banget, enak diajak
+                        ngobrol soal kopi. Toast coklat kejunya wajib coba sih!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 bg-cover bg-center"
+                            data-alt="Portrait of a smiling young man with glasses"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsWHB1wlSauuZxkww_4PcO2SbnDxBRUd7UO_Ni0iZdmRqQEE4ng3B35X9tl2hVvTIMTDvhNWItrdJaYqv1WS3SmZo60RW9FUitDx6zhwaEeR1OSpuWvhh--UIpfF79VJXR0TknoGtJ8dMOw2Xewi5jet-kWvBHys9vF81jAOvpAO_7tbm54BZ3XO0q5k0pq2FXXmSV3pzTGADM6LggtAZkoVZsHk9Zv_Is3vEytndtjbHr6whtRFBIAHgYu7fAfRdoDYyFX52lYviz');">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-coffee-dark dark:text-white font-display">Budi Santoso
+                            </h4>
+                            <p class="text-xs text-gray-500">Freelancer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-accent/30 dark:bg-background-dark p-8 rounded-2xl relative">
+                    <span
+                        class="material-symbols-outlined absolute top-6 right-6 text-4xl text-primary/20">format_quote</span>
+                    <div class="flex text-yellow-500 mb-4">
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                        <span class="material-symbols-outlined text-sm fill-current">star</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"Suasananya tenang, cocok buat meeting
+                        santai. Harganya juga sangat bersahabat."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 bg-cover bg-center"
+                            data-alt="Portrait of a smiling woman"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfxcmrO0NoXixIojZRLnkuTddYk9Sf7ZDzjJysOec_R4m5j9GkCLLZkW0EQZK-wq_jJaPIMu668nlIxOKOf_VMaW0ykQZS1nFW2DycsT-zPazXP_-oAPq2IgsqRSouPe3_YiuXUdGxqrVeVs8wdN_gdhmPaZl-nQGe7PtsXaT3iZlGcrEU1YZPy5HG1aKxwzcizZXPdKFmI0O24MvLAvK3gPteGF8h6jDrH2-iQBQcytxgFheaclr-O0feOPr6SwYmS75Fg3oPzr4K');">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-coffee-dark dark:text-white font-display">Diana Putri</h4>
+                            <p class="text-xs text-gray-500">Karyawan Swasta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative py-20 bg-primary overflow-hidden" id="kontak">
+        <div class="absolute inset-0 z-0 opacity-10"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQ7zkRje3aE-lHj9G2nJpLM5cdwztBmgBpyqZATNWQjVGmf5XiK158iyQJ5wEynxh2mg2N2Sh1rtxnIiSkKp0KOdiB2z5Alu32bZIqimL2n4b_L3tlfU0DRo8IqKPRoSVQhGH0FdBS9NLS1LgIxm-zILu2g9slQayJcgqUkUxFZ3gdOPpLxIyegVJnv9UXOXsUuhNf4TY5COEFbBu7vVLZxqInp29XbOkvxGHw3waVSnw0d1J8TAAzWMGeaTbcjAMPy--TWTTFwH8J');">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="bg-background-light dark:bg-background-dark rounded-2xl shadow-2xl p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
+                <div class="flex-1 space-y-6">
+                    <h2 class="text-3xl font-bold text-coffee-dark dark:text-white font-display">Siap Menikmati Sajian Favoritmu?</h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg">
+                        Datang langsung ke kedai kami atau pesan secara online untuk dinikmati di rumah. Kami siap menemani waktu santai dan
+                        momen kebersamaan Anda.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                            <div>
+                                <h4 class="font-bold text-coffee-dark dark:text-white font-display">Lokasi</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Kp.Pasir Kiara, Desa Ciakdut, Kec. Cimenyan, Kota Bandung</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-1">schedule</span>
+                            <div>
+                                <h4 class="font-bold text-coffee-dark dark:text-white font-display">Jam Buka</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Senin - Minggu: 10.00 - 12.00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-1">call</span>
+                            <div>
+                                <h4 class="font-bold text-coffee-dark dark:text-white font-display">Hubungi Kami</h4>
+                                <p class="text-gray-600 dark:text-gray-400">08993363405 (WhatsApp)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 h-[350px] md:h-[420px] rounded-xl overflow-hidden shadow-lg relative">
+                
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3899.2061995136282!2d107.68268477499615!3d-6.878818293120053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTInNDMuOCJTIDEwN8KwNDEnMDYuOSJF!5e1!3m2!1sid!2sid!4v1767362852976!5m2!1sid!2sid"
+                        class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                    </iframe>
+                
+                    <!-- OVERLAY BUTTON -->
+                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+                        <a href="https://www.google.com/maps?q=-6.878818293120053,107.68268477499615" target="_blank"
+                            rel="noopener noreferrer">
+                            <button
+                                class="bg-white text-primary font-bold py-2 px-6 rounded-lg shadow-lg hover:scale-105 transition-transform flex items-center gap-2 font-display">
+                                <span class="material-symbols-outlined">map</span>
+                                Buka di Google Maps
+                            </button>
+                        </a>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-coffee-dark text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">coffee</span>
+                        <h2 class="text-xl font-bold font-display">Kedai Kang Iky</h2>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                    Sajian makanan & minuman favorit untuk menemani setiap momen.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 font-display">Navigasi</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="#">Beranda</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#tentang">Tentang Kami</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="menu.html">Menu</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 font-display">Ikuti Kami</h3>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">public</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white"
+                            href="#">
+                            <span class="material-symbols-outlined text-lg">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 font-display">Masukan Email</h3>
+                    <p class="text-sm text-gray-400 mb-4">Dapatkan info terbaru dari Kedai Kang Iky.</p>
+                    <div class="flex gap-2">
+                        <input
+                            class="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary"
+                            placeholder="Email Anda" type="email" />
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white p-2 rounded-lg transition-colors font-display">
+                            <span class="material-symbols-outlined text-xl">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>© 2025 Onedfhz.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Menu Lengkap - Kedai Kang Iky</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#A0522D", // Deep, muted terracotta red
+                        "secondary": "#7A5230", // Warm, dark wood brown
+                        "accent": "#D4C9BF", // Soft greige
+                        "background-light": "#F8F5F2", // Slightly adjusted off-white for better contrast with greige, previously was #fcfaf8
+                        "background-dark": "#221810", // Very Dark Coffee (maintained)
+                        "coffee-dark": "#1b130d", // Dark Text (maintained)
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "sans-serif"],
+                        "body": ["DM Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-text-light font-display transition-colors duration-300">
+    <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 w-full bg-background-light/95 backdrop-blur-sm border-b border-accent dark:bg-background-dark/95 dark:border-[#3e2b22]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-3xl">store</span>
+                        <h1 class="text-xl font-bold tracking-tight text-coffee-dark dark:text-white font-display">Kedai
+                            Kang Iky</h1>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-sm font-medium text-coffee-dark hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary font-display"
+                            href="index.html">Beranda</a>
+                        <a class="text-sm font-medium text-coffee-dark hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary font-display"
+                            href="#tentang">Tentang Kami</a>
+                        <a class="text-sm font-medium text-coffee-dark hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary font-display"
+                            href="menu.html">Menu</a>
+                        <a class="text-sm font-medium text-coffee-dark hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary font-display"
+                            href="#kontak">Kontak</a>
+                    </nav>
+                    <div class="hidden md:flex">
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2 px-5 rounded-lg transition-colors shadow-sm flex items-center gap-2 font-display">
+                            <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                            Pesan Sekarang
+                        </button>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button class="text-coffee-dark dark:text-white hover:text-primary p-2 font-display">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main class="layout-container flex h-full grow flex-col items-center">
+            <!-- Hero Section -->
+            <section class="w-full max-w-[1280px] px-4 md:px-10 py-5">
+                <div
+                    class="rounded-xl overflow-hidden relative min-h-[400px] flex flex-col items-center justify-center text-center p-8 gap-6 shadow-lg group">
+                    <!-- Background Image with Overlay -->
+                    <div class="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Close up of coffee beans being roasted"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDM3JoZ2RjK-JNIEu2h61enqbe1aL_A9nv0p4H4XZPiL_xiIBpe7L2LnSWv6OuSTG52iCgxJv_vwJNR51ZgVWRQRV6wVU9tD-n_BuolGmJ8671JQAhwxyKCcA1Ujoh-5Qy1j-bVIG5COx-9_fTiRqUXs6EUTuix3KE5HUjtTtrZ121I__YUKZnmLImRDEQ5Uii6ZE7VtouWeoWR5sXOm-PzPDLFAIZoF8t6dALTzeRctENUsdzPpM9f1q8_ODX7-b5rp2o7IWya7Q9U");'>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-0"></div>
+                    <div class="relative z-10 flex flex-col gap-3 max-w-2xl">
+                        <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                            Menu Kami
+                        </h1>
+                        <p class="text-gray-200 text-base md:text-lg font-normal max-w-xl mx-auto">
+                            Nikmati hangatnya kopi rumahan. Dibuat dengan cinta, dari biji pilihan nusantara, disajikan
+                            spesial untuk Anda.
+                        </p>
+                    </div>
+                    <!-- Search Bar -->
+                    <div class="relative z-10 w-full max-w-[480px]">
+                        <label
+                            class="flex w-full items-stretch rounded-lg h-12 md:h-14 bg-white dark:bg-surface-dark shadow-xl ring-1 ring-black/5 dark:ring-white/10 overflow-hidden">
+                            <div class="flex items-center justify-center pl-4 text-text-secondary">
+                                <span class="material-symbols-outlined">search</span>
+                            </div>
+                            <input
+                                class="w-full min-w-0 flex-1 border-0 bg-transparent text-text-main dark:text-text-light focus:ring-0 placeholder:text-text-secondary/70 px-3 text-base"
+                                placeholder="Cari menu favoritmu (cth: Kopi Susu)..." />
+                            <div class="p-1">
+                                <button
+                                    class="h-full px-5 bg-primary hover:bg-[#b0510e] text-white rounded-md font-bold text-sm transition-colors">
+                                    Cari
+                                </button>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <!-- Sticky Category Filter -->
+            <div
+                class="sticky top-[65px] z-40 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#f3ece7] dark:border-[#3e2c22] py-4 shadow-sm">
+                <div class="max-w-[1280px] mx-auto px-4 md:px-10 overflow-x-auto no-scrollbar">
+                    <div class="flex gap-3 min-w-max">
+                        <button
+                            class="flex h-9 items-center justify-center px-5 rounded-full bg-primary text-white font-medium shadow-sm transition-transform hover:scale-105 active:scale-95">
+                            Semua
+                        </button>
+                        <button
+                            class="flex h-9 items-center justify-center px-5 rounded-full bg-white dark:bg-surface-dark border border-[#e7d9cf] dark:border-[#3e2c22] text-text-main dark:text-text-light hover:bg-[#f3ece7] dark:hover:bg-[#3e2c22] font-medium transition-colors">
+                            Kopi Signature
+                        </button>
+                        <button
+                            class="flex h-9 items-center justify-center px-5 rounded-full bg-white dark:bg-surface-dark border border-[#e7d9cf] dark:border-[#3e2c22] text-text-main dark:text-text-light hover:bg-[#f3ece7] dark:hover:bg-[#3e2c22] font-medium transition-colors">
+                            Espresso Based
+                        </button>
+                        <button
+                            class="flex h-9 items-center justify-center px-5 rounded-full bg-white dark:bg-surface-dark border border-[#e7d9cf] dark:border-[#3e2c22] text-text-main dark:text-text-light hover:bg-[#f3ece7] dark:hover:bg-[#3e2c22] font-medium transition-colors">
+                            Non-Kopi
+                        </button>
+                        <button
+                            class="flex h-9 items-center justify-center px-5 rounded-full bg-white dark:bg-surface-dark border border-[#e7d9cf] dark:border-[#3e2c22] text-text-main dark:text-text-light hover:bg-[#f3ece7] dark:hover:bg-[#3e2c22] font-medium transition-colors">
+                            Makanan Ringan
+                        </button>
+                        <button
+                            class="flex h-9 items-center justify-center px-5 rounded-full bg-white dark:bg-surface-dark border border-[#e7d9cf] dark:border-[#3e2c22] text-text-main dark:text-text-light hover:bg-[#f3ece7] dark:hover:bg-[#3e2c22] font-medium transition-colors">
+                            Makanan Berat
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full max-w-[1280px] px-4 md:px-10 pb-20">
+                <!-- Section: Kopi Favorit -->
+                <div class="pt-8 pb-4 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary">verified</span>
+                    <h2 class="text-text-main dark:text-text-light text-2xl font-bold tracking-tight">Kopi Favorit</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="absolute top-3 right-3 z-10">
+                                <span
+                                    class="bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm backdrop-blur-sm">Best
+                                    Seller</span>
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Iced coffee latte with milk swirl"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3PVnGWfrAPFfSLJwxVFhT6pxwlcJYrZEjq5d9gFLKUTqYedun_x0A0aVKuL73avhwELlDOxAnFSg1bLBaZfzCoojqGDltgKGLiNHqigaFslcNSLIapi6aC--Z4GR29D11Fglv0iNjnMveiskDAKxYiUns06MBHEPXaMqqlqcLP1WQMjrUlq444sV6pRVTVLlDe8cMWC3yvb6xrEMLqojt7RLfR3k-nIMV0m9hF8LLpZFdl-M6iV96XdfFYmqLmUYH2GG5yNZx5EEX");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Es Kopi
+                                    Susu Gula Aren</h3>
+                            </div>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Perpaduan
+                                espresso robusta, susu segar, dan gula aren asli yang legit.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 18.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Hot cappuccino with latte art in white cup"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAE6sfHLEFwOusRWfzoff_KSw8rwYY12G04yM1CGpUVk3rgj8L4CPeHBKrbyJPm7J5jXdce91BdUnDn0w8Wgn71Ot8RoqEnEeCEqxkn652UCfo1umkSyfrvzyct24aEacWeyLNA3HlyomXzo26BrziKDiCSZz-z2uWN85TjxO-bFqKirt0oT1hKXNFZBWJbk3AVqpE7MqOwdCaaFPYh6qoljDwmRqJYG_MwOLo48SSWnfzh8xI8fZ0z9lKsEEtMChSoZeraWsEOiBeU");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Cappuccino
+                                Panas</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Espresso single
+                                shot dengan susu steam yang lembut dan foam tebal.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 22.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="absolute top-3 right-3 z-10">
+                                <span
+                                    class="bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm backdrop-blur-sm">Wajib
+                                    Coba</span>
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Close up of iced americano glass"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAP6eKra6vzG3qyWSJp9GHX88BhIQyQHk4BYZ4vqNnIM2qLT2ZvsIn3C8EO_qsrxxEK7yP1omJnbB9H75rqjy_1sRUjASdUWuZhXmbFf-7_UAb0Z6eMaamZ2gzCxnRRgQUNgtJzSXUocUh-mHg_mvp6GJiLoXq2qsoW1Tg0bLxMK6eFeVF7s30sH8TX7aj30ohbC6wybtV4b7SKXkDvSpbMxgZQ9srp5OUF6zuggezOtcFfjDB2eW3qQBSFMEkkI4Iku-E-AumCdfW");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Es Americano
+                            </h3>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Segarnya
+                                espresso house blend dengan air mineral dingin dan es batu.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 15.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Caramel macchiato with drizzle"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCK4EksAcYUMzQIulNHZfpnsFtgi4wppbp-38HGQT9MYikUZwsMavOiBdHT6fyhBcjOos7V3hakcNNUr2_8H0OpNJNgKFu4C2NaT77tqrJPCSsfh_DPE9_YqytGKnEgJYjd-dlLll-tkFfnb63k0x65Q-gfvB9WJwF6sgEXL3wx3H0L8vYE9G_yvZLXilwZ74eJeartV6rq52w2SL2UeMf1rScK0IrjbhzR_8KzL4z1DtHWjfyqlGtyjecykWbgxkVTgjLyDuhgjEQa");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Caramel
+                                Macchiato</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Paduan vanilla,
+                                susu, espresso, dan saus karamel manis.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 25.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section: Non-Kopi -->
+                <div class="pt-10 pb-4 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary">local_drink</span>
+                    <h2 class="text-text-main dark:text-text-light text-2xl font-bold tracking-tight">Non-Kopi</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Card 5 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="absolute top-3 right-3 z-10">
+                                <span
+                                    class="bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm backdrop-blur-sm">Favorit
+                                    Anak</span>
+                            </div>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Hot chocolate with marshmallows"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQUX6P8AqVSFpZwxReBqCR1KzKNrj72jjaMYyMRlB5RlPL-tGu4lS4DyIGjZkUcjLtc-flSVbF5FXu1Z46YDw4NUPo21lo-QryDGgJcRP0OCHCINPivCLNcoIDMfYEdCuhslPb_-FFKlxRe8g3oO5rA_Q7xT5H6SxudgEvwiBQJOq3wTyg3w04zGUyEUkmgJGFyat0058hYnokPWsol78UL_pUdUz-z1sX4S6dJ7EDyyoKiJmPOHENIDzPY1AxU34EcElaHjFcU6Gk");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Signature
+                                Chocolate</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Coklat premium
+                                Belgia yang creamy dan rich, disajikan panas atau dingin.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 24.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Green matcha latte"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD55zQ0xhr4FveyvBd4Kgbx96qjLKyW7i5yvtebKGTSMkNbSKZsEFFRPTQTPgBBaNWWea26tbVlbwY4cctxQtkH70ZRwPxL84XxTSRfc9AmQ4lCH0r2hh2OpFozlktUopB8oVqHwgC2Uzg-Cp9YaF7SZBcfnkcC2l2VAALHipBOTqSmfBwI7sTB4CSSISjYIycpOWCsyEMhNWDmdildNkqfl03pd-vjzGEEdr0DyB_5xgN0jO9XcX0YHO4dsYiLgASXJhLmwcR3ViXA");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Matcha Latte
+                                Creamy</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Bubuk matcha
+                                asli Jepang dicampur susu segar yang manis alami.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 26.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Red velvet latte"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe9b6GpuNCnLQof_9cf1eLrdayvaKMuV7UKTMPmqL1_cBdL_bdDNDyNSiV0b8-6apEQa9_yygrzbBO7cvUjCB-P9PE256ltHmYL9yNtZ__uHHIK9caO2uemuORpvmo8H_TsXiT19f7tEyYYusvggW666RT2Bp37Ujz22TGXRffrRCXlmJmpNgwBxhUbLpSvBdcewuy0_sMSCfSUWXSM7SPIPBGBTsajx8Uwmn3v95KFureTuamDMTPPyTPRHLKZI-qKf6iDv-OBUFM");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Red Velvet
+                                Latte</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Rasa red velvet
+                                cake dalam bentuk minuman yang lembut.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 24.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section: Makanan Ringan -->
+                <div class="pt-10 pb-4 flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary">bakery_dining</span>
+                    <h2 class="text-text-main dark:text-text-light text-2xl font-bold tracking-tight">Makanan Ringan
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Card 8 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Grilled toast with chocolate and cheese"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_Si_-RO9vMY1F14x-f0U7EOIit0EpAYo-NP_qjmQNgy9ArvBclHOjv78qTy4B_L_NKo4sOQEDkPA3_JYsR0_aKGaNI-E_zXAo8qBUMQR8e6CFsEW-xenAx-VnsMvhw3uZnMs8EhkuqYPj_J-GWdakYwmHyxFSV7nY37R_sDKK1QoI6FQ4XRtySC_p3C9yPRH3kbTlDmfciWybft_vZ1Uok_wZd0uwwDAEeWmy48P0KSMU2LMY-Ilvoj5mPtnC0I3fIBQ-LlOaZl6t");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Roti Bakar
+                                Coklat Keju</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Roti tawar tebal
+                                dibakar garing dengan topping melimpah.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 15.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Fried fries in a basket"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3VWPm-VtI3f5VfGWbRSUCpRilEe4o871yZuOT9Y66KaB7Va1fcNRf6DwewnjwLdYbslEjxi7LfZf3Cw3rxBXJ2ZYphrqkpEMhoDvLfvDLWouOndjQuIyaSAU38UWhsOyvrtdqYuBpE8Zc3YwuZbdXtZvuIYzpNGDiOYiWPMPYzalOvKTX1uiBFhICx1G-oGKOcPQwVfJitOq-CpyAQq0WBULl6af3KKe_GvpUg4GFAQURnd7wxJvd7Uop1Us9DOn5FI3or2R2jVl");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Kentang
+                                Goreng</h3>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Kentang goreng
+                                renyah dengan taburan bumbu original.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 12.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div
+                        class="flex flex-col bg-white dark:bg-surface-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-[#f3ece7] dark:border-[#3e2c22] group">
+                        <div class="aspect-[4/3] w-full bg-gray-100 dark:bg-gray-800 relative overflow-hidden">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Healthy fruit juice smoothie"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3hT2yAwS_ftyg60Q8XO0aY1VFGDma0NWX8ToVjhM41QoJC5R1Fr9oB-XEpZ6xSoICQPzjdj9UOMR49PBQYcDDpMUTqpqjU05eK9wHVGVtbYbA_3CXtuhFE3vMjDaUIdSGvAuKg7cLkK8dsNJ9QHN_CTX-qCwwwQGNe7AfdgOji9utOdyEfitGb2FXZF9a4iQgnkeKYwKev9GY33dx2tLM_9-KfcWKMNA2cbxaQILpZZf44Sbae-Lw1ZuRw4ideCbG5EzgF6TANV_J");'>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-1 gap-2">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-bold text-text-main dark:text-text-light leading-tight">Jus
+                                    Jeruk Segar</h3>
+                                <span
+                                    class="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-[10px] font-bold px-2 py-0.5 rounded-full">Baru</span>
+                            </div>
+                            <p class="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-auto">Perasan jeruk
+                                murni tanpa pemanis buatan.</p>
+                            <div
+                                class="mt-4 flex items-center justify-between border-t border-[#f3ece7] dark:border-[#3e2c22] pt-3">
+                                <span class="text-primary text-lg font-bold">Rp 18.000</span>
+                                <button
+                                    class="size-8 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-colors">
+                                    <span class="material-symbols-outlined text-[20px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CTA Banner -->
+                <div
+                    class="mt-16 w-full rounded-2xl bg-primary text-white p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                    <div
+                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
+                    </div>
+                    <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 flex flex-col gap-2 text-center md:text-left">
+                        <h3 class="text-2xl md:text-3xl font-black">Sudah siap memesan?</h3>
+                        <p class="text-white/90 font-medium">Hubungi kami via WhatsApp untuk pemesanan cepat atau tanya
+                            stok.</p>
+                    </div>
+                    <div class="relative z-10">
+                        <button
+                            class="flex items-center gap-2 bg-white text-primary hover:bg-gray-50 font-bold py-3 px-6 rounded-lg shadow-lg transition-transform hover:-translate-y-1">
+                            <span class="material-symbols-outlined">chat</span>
+                            <span>Chat WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer
+            class="w-full bg-[#f3ece7] dark:bg-[#1a120b] border-t border-[#e7d9cf] dark:border-[#3e2c22] pt-12 pb-8">
+            <div
+                class="layout-container px-4 md:px-10 flex flex-col md:flex-row justify-between gap-10 max-w-[1280px] mx-auto">
+                <div class="flex flex-col gap-4 max-w-sm">
+                    <div class="flex items-center gap-3 text-text-main dark:text-text-light">
+                        <div class="size-8 text-primary flex items-center justify-center">
+                            <span class="material-symbols-outlined !text-3xl">coffee</span>
+                        </div>
+                        <h2 class="text-lg font-bold">Kedai Kopi Rumahan</h2>
+                    </div>
+                    <p class="text-text-secondary text-sm leading-relaxed">
+                        Tempat nongkrong asik dengan cita rasa kopi rumahan yang otentik. Buka setiap hari untuk
+                        menemani produktivitasmu.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-text-main dark:text-text-light font-bold">Lokasi &amp; Kontak</h3>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-start gap-2 text-text-secondary text-sm">
+                            <span class="material-symbols-outlined text-lg shrink-0">location_on</span>
+                            <p>Jl. Melati No. 45, Tebet, Jakarta Selatan</p>
+                        </div>
+                        <div class="flex items-center gap-2 text-text-secondary text-sm">
+                            <span class="material-symbols-outlined text-lg shrink-0">call</span>
+                            <p>+62 812 3456 7890</p>
+                        </div>
+                        <div class="flex items-center gap-2 text-text-secondary text-sm">
+                            <span class="material-symbols-outlined text-lg shrink-0">schedule</span>
+                            <p>Senin - Minggu: 08.00 - 22.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-text-main dark:text-text-light font-bold">Ikuti Kami</h3>
+                    <div class="flex gap-4">
+                        <a class="size-10 rounded-full bg-white dark:bg-surface-dark border border-[#e7d9cf] dark:border-[#3e2c22] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <!-- Simple placeholder for social icons using material symbols -->
+                            <span class="font-bold text-lg">IG</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white dark:bg-surface-dark border border-[#e7d9cf] dark:border-[#3e2c22] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <span class="font-bold text-lg">FB</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 border-t border-[#e7d9cf] dark:border-[#3e2c22] pt-6 text-center">
+                <p class="text-text-secondary text-xs">© 2023 Kedai Kopi Rumahan. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
